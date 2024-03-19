@@ -1,0 +1,118 @@
+body {
+  header.header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 8px 0;
+
+    nav.navbar {
+      @include flex-center;
+      justify-content: space-between;
+
+      .menu-area {
+        @include flex-center;
+        flex: 1;
+
+        &.left-side-menu {
+          justify-content: flex-start;
+        }
+
+        &.right-side-menu {
+          justify-content: flex-end;
+        }
+
+        ul.menu-wrapper {
+          @include flex-center;
+          justify-content: space-between;
+          width: 100%;
+
+          li.menu-itm {
+            a.menu-link {
+              color: $theme-primary;
+              position: relative;
+              text-transform: uppercase;
+              transition: $transition;
+
+              @extend p;
+              font-weight: $medium;
+
+              &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                transform: translateY(3px);
+                background-color: $theme-primary;
+                border-radius: 3px;
+                transition: $transition;
+              }
+
+              &:hover {
+                transition: $transition;
+              }
+            }
+          }
+        }
+      }
+
+      .brand-area {
+        max-width: 100px;
+        @include flex-center;
+        justify-content: center;
+        margin: 0 120px;
+
+        @media screen and (max-width: 1199px) {
+          margin: 0 100px;
+        }
+        @media screen and (max-width: 991px) {
+          margin: 0 80px;
+        }
+
+        .logo-link {
+          @include flex-center;
+          justify-content: center;
+          height: 41px;
+
+          img.brand-logo {
+            width: auto;
+            height: 100%;
+            transition: $transition;
+          }
+        }
+      }
+    }
+
+    &.colored-header {
+      background-color: rgba($theme-primary, 0.55);
+      backdrop-filter: blur(5px) brightness(0.95);
+
+      nav.navbar {
+        .menu-area {
+          ul.menu-wrapper {
+            li.menu-itm {
+              a.menu-link {
+                color: $theme-secondary;
+
+                &:after {
+                  background-color: $theme-secondary;
+                }
+              }
+            }
+          }
+        }
+
+        .brand-area {
+          .logo-link {
+            img.brand-logo {
+              filter: brightness(0);
+              transition: $transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}
