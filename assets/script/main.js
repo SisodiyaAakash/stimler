@@ -130,7 +130,7 @@ function functionWrapper($) {
             const bannerSection = $('section.rounded-banner-section-wrap');
             const bannerImage = bannerSection.find('.rounded-banner');
             const options = {
-               threshold: 0.5 // Trigger when 20% of the banner section is visible in viewport
+               threshold: 0.2 // Trigger when 20% of the banner section is visible in viewport
             };
 
             const observer = new IntersectionObserver((entries, observer) => {

@@ -213,10 +213,12 @@ body {
     text-align: center;
   }
 
-  .theme-primary-text, .theme-primary-text * {
+  .theme-primary-text,
+  .theme-primary-text * {
     color: $theme-primary;
   }
-  .theme-secondary-text, .theme-secondary-text * {
+  .theme-secondary-text,
+  .theme-secondary-text * {
     color: $theme-secondary;
   }
 
@@ -224,17 +226,17 @@ body {
   .section-label {
     @extend p;
     font-weight: $medium;
-	 
+
     padding: 3.6px 10.8px;
     width: max-content;
     border-radius: $theme-section-label-radius;
 
-	 background-color: $theme-secondary;
-	 border: 1px solid $theme-secondary;
+    background-color: $theme-secondary;
+    border: 1px solid $theme-secondary;
 
-	 &.secondary-label {
-		background-color: transparent;
-		color: $theme-secondary;
-	 }
+    &.secondary-label {
+      background-color: transparent;
+      color: $theme-secondary;
+    }
   }
 }
