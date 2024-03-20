@@ -156,9 +156,39 @@ function functionWrapper($) {
             }
          };
 
+         // Parallax Effect for fabrics banner section
+         const parallaxEffectFabricsBanner = function () {
+            const fabricsBannerSection = $('section.fabrics-banner-section-wrap');
+            const fabricsBannerImage = fabricsBannerSection.find('.fabrics-banner-section');
+            const options = {
+               threshold: 0.5 // Trigger when 50% of the banner section is visible in viewport
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+               entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                     // If the section is in the viewport, apply the parallax effect
+                     $(window).on('scroll', adjustFabricsBanner);
+                  } else {
+                     // If the section is not in the viewport, remove the parallax effect
+                     $(window).off('scroll', adjustFabricsBanner);
+                  }
+               });
+            }, options);
+
+            observer.observe(fabricsBannerSection[0]);
+
+            function adjustFabricsBanner() {
+               const scrollPos = $(window).scrollTop();
+               // Adjust background position based on scroll position
+               fabricsBannerImage.css('background-position-y', -scrollPos * 0.09 + 'px');
+            }
+         };
+
          parallaxEffectHero();
          parallaxEffectAbout();
          parallaxEffectRoundedBanner();
+         parallaxEffectFabricsBanner();
       },
 
       /**

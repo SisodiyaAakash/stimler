@@ -309,8 +309,15 @@ body {
       /* Our Fabircs Section */
       &.fabrics-banner-section-wrap {
         .fabrics-banner-section {
-          background-position: center;
-          background-size: cover;
+          background-position: top center;
+          background-size: 130%;
+
+          @media screen and (max-width: 991px) {
+            background-size: 140%;
+          }
+          @media screen and (max-width: 767px) {
+            background-size: 150%;
+          }
 
           .overlay-wrapper {
             background-color: rgba($black, 0.64);

@@ -781,8 +781,18 @@ body main.main-content section.benefits-section-wrap .benefits-section .benefits
   }
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section {
-  background-position: center;
-  background-size: cover;
+  background-position: top center;
+  background-size: 130%;
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section {
+    background-size: 140%;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section {
+    background-size: 150%;
+  }
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
   background-color: rgba(0, 0, 0, 0.64);
