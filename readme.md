@@ -13,7 +13,7 @@ This project was created for assessment purposes. It showcases the About Us page
 - No CSS framework used for styling
 
 ## Time until now
-Approximately 9.5 hours
+Approximately 10.5 hours
 
 ## Features
 - Parallax effect handled with jQuery, adjusting attributes such as border radius and background position based on scroll position

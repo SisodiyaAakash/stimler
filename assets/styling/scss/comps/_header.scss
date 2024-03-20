@@ -39,6 +39,7 @@ body {
               &:after {
                 content: "";
                 position: absolute;
+                display: block;
                 right: 0;
                 left: 0;
                 bottom: 0;
@@ -52,6 +53,12 @@ body {
 
               &:hover {
                 transition: $transition;
+                color: $hover-grey;
+
+                &::after {
+                  background-color: $hover-grey;
+                  transition: $transition;
+                }
               }
             }
           }
@@ -98,6 +105,18 @@ body {
 
                 &:after {
                   background-color: $theme-secondary;
+                }
+
+                &:hover {
+                  transition: $transition;
+                  // color: $hover-grey;
+                  color: $theme-primary;
+  
+                  &::after {
+                    // background-color: $hover-grey;
+                    background-color: $theme-primary;
+                    transition: $transition;
+                  }
                 }
               }
             }

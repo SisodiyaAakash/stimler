@@ -41,7 +41,7 @@ body {
   */
   /* Section Elements */
 }
-body h1,
+body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span,
 body h2,
 body h3,
 body h4,
@@ -51,7 +51,7 @@ body h6 {
   font-weight: 500;
   color: #FAFAFA;
 }
-body h1 *,
+body h1 *, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span *,
 body h2 *,
 body h3 *,
 body h4 *,
@@ -78,7 +78,7 @@ body button * {
   font-family: inherit;
   font-weight: inherit;
 }
-body h1,
+body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span,
 body h2,
 body h3,
 body h4,
@@ -89,7 +89,7 @@ body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link
 body .section-label {
   padding: 0;
 }
-body h1,
+body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span,
 body h2,
 body h3,
 body h4,
@@ -101,7 +101,7 @@ body .section-label,
 body li {
   color: #FAFAFA;
 }
-body h1,
+body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span,
 body h2,
 body h3,
 body h4,
@@ -123,19 +123,19 @@ body a {
 body a:hover {
   text-decoration: none;
 }
-body h1 {
-  font-size: 66px;
+body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
+  font-size: 79px;
   line-height: 1;
   letter-spacing: -1.32px;
 }
 @media screen and (max-width: 1199px) {
-  body h1 {
+  body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
     font-size: 56px;
     letter-spacing: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  body h1 {
+  body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
     font-size: 48px;
     letter-spacing: 0.48px;
   }
@@ -407,6 +407,7 @@ body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:after {
   content: "";
   position: absolute;
+  display: block;
   right: 0;
   left: 0;
   bottom: 0;
@@ -418,6 +419,11 @@ body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link
   transition: 550ms all ease;
 }
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover {
+  transition: 550ms all ease;
+  color: #858585;
+}
+body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after {
+  background-color: #858585;
   transition: 550ms all ease;
 }
 body header.header nav.navbar .brand-area {
@@ -459,6 +465,14 @@ body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-
 body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:after {
   background-color: #0C0C0C;
 }
+body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover {
+  transition: 550ms all ease;
+  color: #FAFAFA;
+}
+body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after {
+  background-color: #FAFAFA;
+  transition: 550ms all ease;
+}
 body header.header.colored-header nav.navbar .brand-area .logo-link img.brand-logo {
   filter: brightness(0);
   transition: 550ms all ease;
@@ -472,6 +486,7 @@ body main.main-content section {
   /* Rounded Banner Section */
   /* Benefits Section */
   /* Our Fabircs Section */
+  /* Contact CTA Section */
 }
 body main.main-content section.hero-section-wrap .hero-section {
   background-size: cover;
@@ -508,7 +523,7 @@ body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper 
 body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper .hero-content {
   text-align: center;
 }
-body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper .hero-content h1 {
+body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper .hero-content h1, body main.main-content section.hero-section-wrap .hero-section .overlay-wrapper .hero-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn section.hero-section-wrap .hero-section .overlay-wrapper .hero-content span {
   text-transform: uppercase;
 }
 body main.main-content section.about-section-wrap {
@@ -873,5 +888,119 @@ body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-secti
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover img.icon {
   transition: 550ms all ease;
+  transform: rotate(45deg);
+}
+body main.main-content section.contact-section-wrap .contact-section {
+  background-color: #0C0C0C;
+  position: relative;
+  /* Styling for parent's parent div contact section */
+}
+body main.main-content section.contact-section-wrap .contact-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #FFF200;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  transition: 550ms all ease;
+}
+body main.main-content section.contact-section-wrap .contact-section.hovered {
+  transition: 550ms all ease;
+}
+body main.main-content section.contact-section-wrap .contact-section.hovered::after {
+  background-color: #858585;
+  transition: 550ms all ease;
+  top: 35%;
+  right: 40%;
+  bottom: 35%;
+  left: 40%;
+  width: 20%;
+  height: 30%;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
+  padding: 150px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
+    padding: 110px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
+    padding: 90px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
+    padding: 70px 0;
+  }
+}
+@media screen and (max-width: 543px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
+    padding: 30px 0;
+  }
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: -moz-max-content;
+  width: max-content;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
+  position: relative;
+  color: #0C0C0C;
+  text-transform: uppercase;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(10px);
+  transition: 550ms all ease;
+  width: 100%;
+  height: 4px;
+  background-color: #0C0C0C;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn img.icon {
+  transition: 550ms all ease;
+  filter: brightness(0);
+  width: auto;
+  height: 39.5px;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn img.icon {
+    height: 28px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn img.icon {
+    height: 24px;
+  }
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span {
+  color: #FFF200;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span::after {
+  width: 10px;
+  right: 0;
+  background-color: #FFF200;
+  transition: 550ms all ease;
+}
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover img.icon {
+  transition: 550ms all ease;
+  filter: brightness(1);
   transform: rotate(45deg);
 }/*# sourceMappingURL=main.css.map */
