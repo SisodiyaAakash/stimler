@@ -58,6 +58,10 @@ function functionWrapper($) {
                imageElement.css('opacity', '1');
             }, 200); // Adjust the delay time as needed (in milliseconds)
          });
+
+         // Update copyright year
+         var currentYear = new Date().getFullYear();
+         $('.footer .copyright-section .copyright-text #current-year').append(currentYear);
       },
 
       /**

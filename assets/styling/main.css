@@ -60,7 +60,7 @@ body h6 * {
   font-family: inherit;
   font-weight: inherit;
 }
-body p, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
+body p, body footer.footer .footer-inner-wrap .content-area .copyright-section *, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
 body ul li,
 body input,
 body textarea,
@@ -85,6 +85,8 @@ body h4,
 body h5,
 body h6,
 body p,
+body footer.footer .footer-inner-wrap .content-area .copyright-section *,
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label {
   padding: 0;
@@ -96,6 +98,8 @@ body h4,
 body h5,
 body h6,
 body p,
+body footer.footer .footer-inner-wrap .content-area .copyright-section *,
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label,
 body li {
@@ -109,6 +113,8 @@ body h5,
 body h6,
 body a,
 body p,
+body footer.footer .footer-inner-wrap .content-area .copyright-section *,
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span,
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label,
 body button {
@@ -219,14 +225,14 @@ body h6 {
     letter-spacing: 0.2px;
   }
 }
-body p, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
+body p, body footer.footer .footer-inner-wrap .content-area .copyright-section *, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
 body li {
   font-size: 17px;
   line-height: 23px;
   font-weight: 400;
 }
 @media screen and (max-width: 767px) {
-  body p, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
+  body p, body footer.footer .footer-inner-wrap .content-area .copyright-section *, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
   body li {
     font-size: 14.4px;
     line-height: 20.16px;
@@ -608,6 +614,85 @@ body footer.footer .footer-inner-wrap .content-area .footer-contact-section .phy
 }
 body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details {
   margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 27px;
+}
+@media screen and (max-width: 1199px) {
+  body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details {
+    margin-bottom: 54px;
+  }
+}
+@media screen and (max-width: 991px) {
+  body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details {
+    margin-bottom: 27px;
+  }
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span {
+  position: relative;
+  color: #0C0C0C;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(5px);
+  transition: 550ms all ease;
+  width: 100%;
+  height: 2px;
+  background-color: #0C0C0C;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link img.icon {
+  transition: 550ms all ease;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover span::after {
+  width: 10px;
+  right: 0;
+  transition: 550ms all ease;
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover img.icon {
+  transition: 550ms all ease;
+  transform: rotate(45deg);
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link {
+  transition: 550ms all ease;
+  filter: brightness(0);
+}
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link:hover {
+  filter: brightness(1);
+  transition: 550ms all ease;
+}
+body footer.footer .footer-inner-wrap .content-area .copyright-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+body footer.footer .footer-inner-wrap .content-area .copyright-section * {
+  color: #858585;
+}
+body footer.footer .footer-inner-wrap .content-area .copyright-section ul.copyright-menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 1;
 }
 
 /* Pages */
@@ -865,7 +950,7 @@ body main.main-content section.benefits-section-wrap {
     padding: 27px 0;
   }
 }
-body main.main-content section.benefits-section-wrap .benefits-section .heading-area p.section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area .section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.benefits-section-wrap .benefits-section .heading-area a.section-label.menu-link {
+body main.main-content section.benefits-section-wrap .benefits-section .heading-area p.section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area .section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.benefits-section-wrap .benefits-section .heading-area a.section-label.menu-link, body main.main-content section.benefits-section-wrap .benefits-section .heading-area footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span.section-label, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link main.main-content section.benefits-section-wrap .benefits-section .heading-area span.section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area footer.footer .footer-inner-wrap .content-area .copyright-section .section-label, body footer.footer .footer-inner-wrap .content-area .copyright-section main.main-content section.benefits-section-wrap .benefits-section .heading-area .section-label {
   margin-left: auto;
   margin-right: auto;
 }
@@ -977,7 +1062,7 @@ body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-secti
     margin: 0 auto;
   }
 }
-body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content p.section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content .section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.section-label.menu-link {
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content p.section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content .section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.section-label.menu-link, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span.section-label, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content span.section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content footer.footer .footer-inner-wrap .content-area .copyright-section .section-label, body footer.footer .footer-inner-wrap .content-area .copyright-section main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content .section-label {
   margin-left: auto;
   margin-right: auto;
 }
