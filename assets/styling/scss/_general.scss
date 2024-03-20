@@ -45,6 +45,14 @@ body {
     }
   }
 
+  .hide {
+    display: none;
+  }
+
+  &.oveflow-hidden, .oveflow-hidden {
+    overflow: hidden;
+  }
+
   section {
     position: relative;
     z-index: 1;

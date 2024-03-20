@@ -13,6 +13,10 @@ body {
         @include flex-center;
         flex: 1;
 
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+
         &.left-side-menu {
           justify-content: flex-start;
         }
@@ -77,8 +81,14 @@ body {
         @media screen and (max-width: 991px) {
           margin: 0 80px;
         }
+        @media screen and (max-width: 767px) {
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+          justify-content: space-between;
+        }
 
-        .logo-link {
+        a.logo-link {
           @include flex-center;
           justify-content: center;
           height: 41px;
@@ -87,6 +97,111 @@ body {
             width: auto;
             height: 100%;
             transition: $transition;
+          }
+        }
+
+        a.toggle-btn {
+          display: none;
+          font-size: 21.5px;
+          font-weight: $medium;
+          text-transform: uppercase;
+          position: relative;
+          color: $theme-primary;
+
+          @media screen and (max-width: 767px) {
+            display: block;
+          }
+
+          &::after {
+            content: "";
+            width: 100%;
+            display: block;
+            height: 2px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transform: translateY(5px);
+            background-color: $theme-primary;
+          }
+
+          span {
+            color: inherit;
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      padding: 100px 20px 20px;
+      width: 100%;
+      height: calc(100vh - 57px);
+      transform: translateX(150%);
+      transition: $transition-slow;
+      overflow-y: auto;
+      top: 57px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $theme-primary;
+      z-index: 999;
+
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      ul {
+        &.mobile-menu-list {
+          flex: 1;
+          @include flex-column;
+          align-items: flex-start;
+          row-gap: 36px;
+
+          li.menu-itm {
+            a.menu-link {
+              font-size: 36px;
+              line-height: 50.4px;
+              letter-spacing: -0.72px;
+              font-weight: $medium;
+              text-transform: uppercase;
+              position: relative;
+              color: $theme-secondary;
+
+              &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $theme-secondary;
+                transform: translateY(5px);
+              }
+
+              &:hover {
+                color: $hover-grey;
+                
+                &::after {
+                  background-color: $hover-grey;
+                }
+              }
+            }
+          }
+        }
+        &.social-link-list {
+          @include flex-wrap;
+          gap: 30px;
+
+          li.social-itm {
+            .social-link {
+              .social-icon {
+                filter: brightness(0);
+              }
+            }
           }
         }
       }
@@ -111,7 +226,7 @@ body {
                   transition: $transition;
                   // color: $hover-grey;
                   color: $theme-primary;
-  
+
                   &::after {
                     // background-color: $hover-grey;
                     background-color: $theme-primary;
@@ -130,7 +245,43 @@ body {
               transition: $transition;
             }
           }
+
+          a.toggle-btn {
+            color: $theme-secondary;
+
+            &::after {
+              background-color: $theme-secondary;
+            }
+          }
         }
+      }
+    }
+
+    &.open-mobile-header {
+      background-color: $theme-primary;
+      transition: $transition-slow;
+
+      nav.navbar {
+        .brand-area {
+          .logo-link {
+            img.brand-logo {
+              filter: brightness(0);
+              transition: $transition;
+            }
+          }
+
+          a.toggle-btn {
+            color: $theme-secondary;
+
+            &::after {
+              background-color: $theme-secondary;
+            }
+          }
+        }
+      }
+
+      .mobile-menu {
+        transform: translateX(0);
       }
     }
   }

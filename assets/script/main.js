@@ -15,7 +15,7 @@ function functionWrapper($) {
        */
       registerEventHandlers: function () {
          // I'm providing example here
-         $(document).on('click', 'selector', themeChild.functionName);
+         $(document).on('click', 'body header.header nav.navbar .brand-area a.toggle-btn', themeChild.toggleMobileMenu);
       },
 
       /**
@@ -231,12 +231,19 @@ function functionWrapper($) {
       },
 
       /**
-       * Functions for event handlers
+       * On click of the toggle button of mobile header it will execute toggleMobileMenu function
+       * This function will toggle different class for mobile menu
        */
-      functionName: function () {
-         // So much code here
-      },
+      toggleMobileMenu: function (event) {
+         event.preventDefault();
+         // Toggle open-mobile-menu class on body header.header .mobile-menu
+         $('body').toggleClass('oveflow-hidden');
+         $('body header.header').toggleClass('open-mobile-header');
+         $('body header.header .mobile-menu').toggleClass('open-mobile-menu');
 
+         // Toggle hide class on body header.header nav.navbar .brand-area a.toggle-btn span
+         $('body header.header nav.navbar .brand-area a.toggle-btn span').toggleClass('hide');
+      },
    }; // end themeChild
 
    $(document).ready(themeChild.init);

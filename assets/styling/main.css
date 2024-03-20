@@ -335,6 +335,12 @@ body .container {
     max-width: 100%;
   }
 }
+body .hide {
+  display: none;
+}
+body.oveflow-hidden, body .oveflow-hidden {
+  overflow: hidden;
+}
 body section {
   position: relative;
   z-index: 1;
@@ -398,6 +404,11 @@ body header.header nav.navbar .menu-area {
   align-items: center;
   flex: 1;
 }
+@media screen and (max-width: 767px) {
+  body header.header nav.navbar .menu-area {
+    display: none;
+  }
+}
 body header.header nav.navbar .menu-area.left-side-menu {
   justify-content: flex-start;
 }
@@ -456,16 +467,115 @@ body header.header nav.navbar .brand-area {
     margin: 0 80px;
   }
 }
-body header.header nav.navbar .brand-area .logo-link {
+@media screen and (max-width: 767px) {
+  body header.header nav.navbar .brand-area {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+body header.header nav.navbar .brand-area a.logo-link {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 41px;
 }
-body header.header nav.navbar .brand-area .logo-link img.brand-logo {
+body header.header nav.navbar .brand-area a.logo-link img.brand-logo {
   width: auto;
   height: 100%;
   transition: 550ms all ease;
+}
+body header.header nav.navbar .brand-area a.toggle-btn {
+  display: none;
+  font-size: 21.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  color: #FAFAFA;
+}
+@media screen and (max-width: 767px) {
+  body header.header nav.navbar .brand-area a.toggle-btn {
+    display: block;
+  }
+}
+body header.header nav.navbar .brand-area a.toggle-btn::after {
+  content: "";
+  width: 100%;
+  display: block;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(5px);
+  background-color: #FAFAFA;
+}
+body header.header nav.navbar .brand-area a.toggle-btn span {
+  color: inherit;
+}
+body header.header .mobile-menu {
+  display: none;
+  position: fixed;
+  padding: 100px 20px 20px;
+  width: 100%;
+  height: calc(100vh - 57px);
+  transform: translateX(150%);
+  transition: 750ms all ease;
+  overflow-y: auto;
+  top: 57px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FAFAFA;
+  z-index: 999;
+}
+@media screen and (max-width: 767px) {
+  body header.header .mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body header.header .mobile-menu ul.mobile-menu-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 36px;
+}
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link {
+  font-size: 36px;
+  line-height: 50.4px;
+  letter-spacing: -0.72px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  color: #0C0C0C;
+}
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0C0C0C;
+  transform: translateY(5px);
+}
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover {
+  color: #858585;
+}
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover::after {
+  background-color: #858585;
+}
+body header.header .mobile-menu ul.social-link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+body header.header .mobile-menu ul.social-link-list li.social-itm .social-link .social-icon {
+  filter: brightness(0);
 }
 body header.header.colored-header {
   background-color: rgba(250, 250, 250, 0.55);
@@ -489,6 +599,29 @@ body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-
 body header.header.colored-header nav.navbar .brand-area .logo-link img.brand-logo {
   filter: brightness(0);
   transition: 550ms all ease;
+}
+body header.header.colored-header nav.navbar .brand-area a.toggle-btn {
+  color: #0C0C0C;
+}
+body header.header.colored-header nav.navbar .brand-area a.toggle-btn::after {
+  background-color: #0C0C0C;
+}
+body header.header.open-mobile-header {
+  background-color: #FAFAFA;
+  transition: 750ms all ease;
+}
+body header.header.open-mobile-header nav.navbar .brand-area .logo-link img.brand-logo {
+  filter: brightness(0);
+  transition: 550ms all ease;
+}
+body header.header.open-mobile-header nav.navbar .brand-area a.toggle-btn {
+  color: #0C0C0C;
+}
+body header.header.open-mobile-header nav.navbar .brand-area a.toggle-btn::after {
+  background-color: #0C0C0C;
+}
+body header.header.open-mobile-header .mobile-menu {
+  transform: translateX(0);
 }
 
 body footer.footer {
