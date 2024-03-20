@@ -432,11 +432,25 @@ body {
               background-color: $hover-grey;
               transition: $transition;
               top: 35%;
-              right: 40%;
               bottom: 35%;
+              right: 40%;
               left: 40%;
               width: 20%;
               height: 30%;
+
+              @media screen and (max-width: 767px) {
+                top: 30%;
+                bottom: 30%;
+                height: 40%;
+              }
+              @media screen and (max-width: 543px) {
+                top: 20%;
+                bottom: 20%;
+                left: 30%;
+                right: 30%;
+                width: 40%;
+                height: 60%;
+              }
             }
           }
 

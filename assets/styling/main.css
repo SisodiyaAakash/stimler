@@ -916,11 +916,28 @@ body main.main-content section.contact-section-wrap .contact-section.hovered::af
   background-color: #858585;
   transition: 550ms all ease;
   top: 35%;
-  right: 40%;
   bottom: 35%;
+  right: 40%;
   left: 40%;
   width: 20%;
   height: 30%;
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.contact-section-wrap .contact-section.hovered::after {
+    top: 30%;
+    bottom: 30%;
+    height: 40%;
+  }
+}
+@media screen and (max-width: 543px) {
+  body main.main-content section.contact-section-wrap .contact-section.hovered::after {
+    top: 20%;
+    bottom: 20%;
+    left: 30%;
+    right: 30%;
+    width: 40%;
+    height: 60%;
+  }
 }
 body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap {
   padding: 150px 0;
