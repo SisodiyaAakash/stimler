@@ -141,75 +141,82 @@ body h1 {
   }
 }
 body h2 {
+  font-size: 60px;
+  line-height: 63px;
+  letter-spacing: -0.6px;
+}
+@media screen and (max-width: 1199px) {
+  body h2 {
+    font-size: 46px;
+    line-height: 49px;
+    letter-spacing: -0.46px;
+  }
+}
+@media screen and (max-width: 767px) {
+  body h2 {
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -0.36px;
+  }
+}
+body h3 {
   font-size: 49px;
   line-height: 54px;
   letter-spacing: -0.49px;
 }
 @media screen and (max-width: 1199px) {
-  body h2 {
+  body h3 {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  body h2 {
+  body h3 {
     font-size: 35px;
     line-height: 40px;
     letter-spacing: 0.35px;
   }
 }
-body h3 {
+body h4 {
   font-size: 36px;
   line-height: 1;
   letter-spacing: -0.36px;
 }
 @media screen and (max-width: 1199px) {
-  body h3 {
+  body h4 {
     font-size: 32px;
     letter-spacing: 0;
   }
 }
 @media screen and (max-width: 767px) {
-  body h3 {
+  body h4 {
     font-size: 27px;
     letter-spacing: 0.32px;
   }
 }
-body h4 {
+body h5 {
   font-size: 32px;
   line-height: 36px;
   letter-spacing: 0.32px;
 }
 @media screen and (max-width: 767px) {
-  body h4 {
+  body h5 {
     font-size: 24px;
     line-height: 27px;
     letter-spacing: 0.24px;
   }
 }
-body h5 {
+body h6 {
   font-size: 24px;
   line-height: 27px;
   letter-spacing: 0.24px;
 }
 @media screen and (max-width: 767px) {
-  body h5 {
+  body h6 {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 0.2px;
-  }
-}
-body h6 {
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-}
-@media screen and (max-width: 767px) {
-  body h6 {
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.15px;
   }
 }
 body p, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link, body .section-label,
@@ -233,16 +240,34 @@ body .theme-secondary-text * {
 }
 body .section-label {
   font-weight: 500;
+  cursor: pointer;
+  transition: 550ms all ease;
   padding: 3.6px 10.8px;
   width: -moz-max-content;
   width: max-content;
   border-radius: 21.6px;
   background-color: #0C0C0C;
   border: 1px solid #0C0C0C;
+  color: #FAFAFA;
+  margin-bottom: 36px;
+}
+@media screen and (max-width: 991px) {
+  body .section-label {
+    margin-bottom: 20px;
+  }
+}
+body .section-label:hover {
+  transition: 550ms all ease;
+  background-color: #FAFAFA;
+  color: #0C0C0C;
 }
 body .section-label.secondary-label {
-  background-color: transparent;
+  background-color: #FAFAFA;
   color: #0C0C0C;
+}
+body .section-label.secondary-label:hover {
+  background-color: #0C0C0C;
+  color: #FAFAFA;
 }
 
 html,
@@ -446,6 +471,7 @@ body main.main-content section {
   /* Companies Section */
   /* Rounded Banner Section */
   /* Benefits Section */
+  /* Our Fabircs Section */
 }
 body main.main-content section.hero-section-wrap .hero-section {
   background-size: cover;
@@ -586,14 +612,6 @@ body main.main-content section.about-section-wrap .about-section .about-inner-wr
     width: 100%;
   }
 }
-body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area p.section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area a.section-label.menu-link {
-  margin: 0 0 36px;
-}
-@media screen and (max-width: 991px) {
-  body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area p.section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area a.section-label.menu-link {
-    margin: 0 0 20px;
-  }
-}
 body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .content-text {
   margin-top: 20px;
 }
@@ -701,12 +719,8 @@ body main.main-content section.benefits-section-wrap {
   }
 }
 body main.main-content section.benefits-section-wrap .benefits-section .heading-area p.section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area .section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.benefits-section-wrap .benefits-section .heading-area a.section-label.menu-link {
-  margin: 0 auto 36px;
-}
-@media screen and (max-width: 991px) {
-  body main.main-content section.benefits-section-wrap .benefits-section .heading-area p.section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area .section-label, body main.main-content section.benefits-section-wrap .benefits-section .heading-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.benefits-section-wrap .benefits-section .heading-area a.section-label.menu-link {
-    margin: 0 auto 20px;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
 body main.main-content section.benefits-section-wrap .benefits-section .benefits-cards {
   margin-top: 50px;
@@ -765,4 +779,89 @@ body main.main-content section.benefits-section-wrap .benefits-section .benefits
   body main.main-content section.benefits-section-wrap .benefits-section .benefits-cards .benefit-card .gradient-overlay .content .benefit-title {
     margin-bottom: 20px;
   }
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section {
+  background-position: center;
+  background-size: cover;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
+  background-color: rgba(0, 0, 0, 0.64);
+  padding: 150px 0;
+  text-align: center;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
+    padding: 110px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
+    padding: 90px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
+    padding: 70px 0;
+  }
+}
+@media screen and (max-width: 543px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper {
+    padding: 30px 0;
+  }
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content {
+    width: 66.6666666667%;
+    margin: 0 auto;
+  }
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content p.section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content .section-label, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.section-label.menu-link {
+  margin-left: auto;
+  margin-right: auto;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn {
+  margin-top: 60px;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn {
+    margin-top: 54px;
+  }
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn span {
+  position: relative;
+  color: #FAFAFA;
+  font-size: 17px;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateY(5px);
+  transition: 550ms all ease;
+  width: 100%;
+  height: 1px;
+  background-color: #FAFAFA;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn img.icon {
+  transition: 550ms all ease;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover span::after {
+  width: 10px;
+  right: 0;
+  transition: 550ms all ease;
+}
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover img.icon {
+  transition: 550ms all ease;
+  transform: rotate(45deg);
 }/*# sourceMappingURL=main.css.map */
