@@ -441,6 +441,8 @@ body header.header.colored-header nav.navbar .brand-area .logo-link img.brand-lo
 body main.main-content section {
   /* Hero Section */
   /* About Us Section */
+  /* Companies Section */
+  /* Rounded Banner Section */
 }
 body main.main-content section.hero-section-wrap .hero-section {
   background-size: cover;
@@ -580,4 +582,88 @@ body main.main-content section.about-section-wrap .about-section .about-inner-wr
     padding: 0;
     width: 100%;
   }
+}
+body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area p.section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area a.section-label.menu-link {
+  margin: 0 0 36px;
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area p.section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .section-label, body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.section-label.menu-link, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area a.section-label.menu-link {
+    margin: 0 0 20px;
+  }
+}
+body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .content-text {
+  margin-top: 20px;
+}
+@media screen and (min-width: 992px) {
+  body main.main-content section.about-section-wrap .about-section .about-inner-wrapper .content-area .content-text {
+    margin-top: 50px;
+    width: 60%;
+    margin-left: auto;
+  }
+}
+body main.main-content section.companies-section-wrap .companies-section .companies-inner-wrapper:not(.slick-initialized) {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+body main.main-content section.companies-section-wrap .companies-section .companies-inner-wrapper .slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main.main-content section.companies-section-wrap .companies-section .companies-inner-wrapper .company-itm {
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main.main-content section.companies-section-wrap .companies-section .companies-inner-wrapper .company-itm img.company-logo {
+  transition: 550ms all ease;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+body main.main-content section.companies-section-wrap .companies-section .companies-inner-wrapper .company-itm:hover img.company-logo {
+  transition: 550ms all ease;
+  filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+  padding: 90px 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 1199px) {
+  body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+    padding: 82px 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+    padding: 68px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+    padding: 52px 0;
+  }
+}
+@media screen and (max-width: 543px) {
+  body main.main-content section.rounded-banner-section-wrap .rounded-banner-section {
+    padding: 27px 0;
+  }
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section .rounded-banner {
+  overflow: hidden;
+  height: 470px;
+  transition: border-radius 0.3s ease;
+  border-radius: 0.5px;
+}
+body main.main-content section.rounded-banner-section-wrap .rounded-banner-section .rounded-banner img.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1.1);
+  transition: 550ms all ease;
 }/*# sourceMappingURL=main.css.map */

@@ -6,8 +6,8 @@ function functionWrapper($) {
       init: function () {
          themeChild.registerEventHandlers();
          themeChild.customFunctions();
-         themeChild.sliderFunctions();
          themeChild.scrollFunctions();
+         themeChild.sliderFunctions();
       },
 
       /**
@@ -29,7 +29,52 @@ function functionWrapper($) {
        * Slider Functions
        */
       sliderFunctions: function () {
-         //Slider functions will be here
+         // Slick slider for the companies section
+         var companiesSlider = $('section.companies-section-wrap .companies-section .companies-inner-wrapper');
+         if (companiesSlider.length > 0) {
+            companiesSlider.slick({
+               slidesToShow: 7,
+               slidesToScroll: 1,
+               dots: false,
+               arrows: false,
+               infinite: true,
+               autoplay: true,
+               autoplaySpeed: 0,
+               speed: 5000,
+               cssEase: 'linear',
+               pauseOnHover: true,
+               responsive: [
+                  {
+                     breakpoint: 1200,
+                     settings: {
+                        slidesToShow: 6,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 992,
+                     settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 768,
+                     settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                     }
+                  },
+                  {
+                     breakpoint: 544,
+                     settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                     }
+                  },
+               ]
+            });
+         }
       },
 
       /**
@@ -67,6 +112,7 @@ function functionWrapper($) {
                }
             });
          };
+         // Parallax Effect for about section
          const parallaxEffectAbout = function () {
             const imgLeft = $('section.about-section-wrap .about-img.img-left img');
             const imgRight = $('section.about-section-wrap .about-img.img-right img');
@@ -77,8 +123,37 @@ function functionWrapper($) {
                imgRight.css('object-position', 'center ' + scrollPos * (-0.09) + 'px');
             });
          };
+         // Parallax Effect for the rounded banner section
+         const parallaxEffectRoundedBanner = function () {
+            const bannerImage = $('section.rounded-banner-section-wrap .rounded-banner');
+            const options = {
+                threshold: 0.2 // Trigger when 20% of the banner section is visible in viewport
+            };
+        
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // If the section is in the viewport, apply the parallax effect
+                        $(window).on('scroll', function () {
+                            const scrollPos = $(window).scrollTop();
+                            // Adjust border radius based on scroll position
+                            const borderRadius = 1 + (scrollPos * 0.5) + "px";
+                            bannerImage.css('border-radius', borderRadius);
+                        });
+                    } else {
+                        // If the section is not in the viewport, remove the border radius adjustment
+                        bannerImage.css('border-radius', '0.5px'); // Reset border radius
+                        $(window).off('scroll');
+                    }
+                });
+            }, options);
+        
+            observer.observe(bannerImage[0]);
+        };        
+
          parallaxEffectHero();
          parallaxEffectAbout();
+         parallaxEffectRoundedBanner();
       },
 
       /**
