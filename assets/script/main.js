@@ -91,7 +91,7 @@ function functionWrapper($) {
             }
          });
 
-         // Parallax Effect for hero background image and about section images
+         // Parallax Effect for hero background image
          const parallaxEffectHero = function () {
             const backgroundImage = $('section.hero-section-wrap .hero-section');
 
@@ -112,6 +112,7 @@ function functionWrapper($) {
                }
             });
          };
+
          // Parallax Effect for about section
          const parallaxEffectAbout = function () {
             const imgLeft = $('section.about-section-wrap .about-img.img-left img');
@@ -123,33 +124,37 @@ function functionWrapper($) {
                imgRight.css('object-position', 'center ' + scrollPos * (-0.09) + 'px');
             });
          };
+
          // Parallax Effect for the rounded banner section
          const parallaxEffectRoundedBanner = function () {
-            const bannerImage = $('section.rounded-banner-section-wrap .rounded-banner');
+            const bannerSection = $('section.rounded-banner-section-wrap');
+            const bannerImage = bannerSection.find('.rounded-banner');
             const options = {
-                threshold: 0.2 // Trigger when 20% of the banner section is visible in viewport
+               threshold: 0.5 // Trigger when 20% of the banner section is visible in viewport
             };
-        
+
             const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // If the section is in the viewport, apply the parallax effect
-                        $(window).on('scroll', function () {
-                            const scrollPos = $(window).scrollTop();
-                            // Adjust border radius based on scroll position
-                            const borderRadius = 1 + (scrollPos * 0.5) + "px";
-                            bannerImage.css('border-radius', borderRadius);
-                        });
-                    } else {
-                        // If the section is not in the viewport, remove the border radius adjustment
-                        bannerImage.css('border-radius', '0.5px'); // Reset border radius
-                        $(window).off('scroll');
-                    }
-                });
+               entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                     // If the section is in the viewport, apply the parallax effect
+                     $(window).on('scroll', adjustBannerRadius);
+                  } else {
+                     // If the section is not in the viewport, remove the border radius adjustment
+                     bannerImage.css('border-radius', '0.5px'); // Reset border radius
+                     $(window).off('scroll', adjustBannerRadius);
+                  }
+               });
             }, options);
-        
-            observer.observe(bannerImage[0]);
-        };        
+
+            observer.observe(bannerSection[0]);
+
+            function adjustBannerRadius() {
+               const scrollPos = $(window).scrollTop();
+               // Adjust border radius based on scroll position
+               const borderRadius = 0.5 + (scrollPos * 0.5) + "px";
+               bannerImage.css('border-radius', borderRadius);
+            }
+         };
 
          parallaxEffectHero();
          parallaxEffectAbout();
