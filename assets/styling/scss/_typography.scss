@@ -125,7 +125,7 @@ body {
   h2 {
     font-size: 60px;
     line-height: 63px;
-    letter-spacing: -0.60px;
+    letter-spacing: -0.6px;
 
     @media screen and (max-width: 1199px) {
       font-size: 46px;
@@ -200,9 +200,14 @@ body {
 
   p,
   li {
-    font-size: 14.4px;
-    line-height: 20.16px;
+    font-size: 17px;
+    line-height: 23px;
     font-weight: $regular;
+
+    @media screen and (max-width: 767px) {
+      font-size: 14.4px;
+      line-height: 20.16px;
+    }
   }
 
   /* Form Fields 
