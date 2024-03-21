@@ -101,7 +101,9 @@ body {
     cursor: pointer;
     color: inherit;
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       text-decoration: none;
     }
   }
@@ -254,7 +256,9 @@ body {
       margin-bottom: 20px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:focus-visible {
       transition: $transition;
       background-color: $theme-primary;
       color: $theme-secondary;
@@ -264,7 +268,9 @@ body {
       background-color: $theme-primary;
       color: $theme-secondary;
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-visible {
         background-color: $theme-secondary;
         color: $theme-primary;
       }

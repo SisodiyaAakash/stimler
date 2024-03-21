@@ -23,7 +23,7 @@ body {
   }
 
   img {
-   max-width: 100%;
+    max-width: 100%;
   }
 
   .container {
@@ -50,7 +50,8 @@ body {
     display: none;
   }
 
-  &.oveflow-hidden, .oveflow-hidden {
+  &.oveflow-hidden,
+  .oveflow-hidden {
     overflow: hidden;
   }
 

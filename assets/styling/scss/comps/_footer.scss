@@ -90,7 +90,9 @@ body {
                     font-size: 27px;
                   }
 
-                  &:hover {
+                  &:hover,
+                  &:focus,
+                  &:focus-visible {
                     transition: $transition;
                     color: $hover-grey;
                   }
@@ -176,7 +178,9 @@ body {
                       transition: $transition;
                     }
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &:focus-visible {
                       span {
                         &::after {
                           width: 10px;
@@ -199,7 +203,9 @@ body {
                     transition: $transition;
                     filter: brightness(0);
 
-                    &:hover {
+                    &:hover,
+                    &:focus,
+                    &:focus-visible {
                       filter: brightness(1);
                       transition: $transition;
                     }

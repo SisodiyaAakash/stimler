@@ -49,7 +49,7 @@ body h5,
 body h6 {
   font-family: "HelveticaNowDisplay";
   font-weight: 500;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 body h1 *, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span *,
 body h2 *,
@@ -103,7 +103,7 @@ body footer.footer .footer-inner-wrap .content-area .footer-contact-section .dig
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link,
 body .section-label,
 body li {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span,
 body h2,
@@ -126,7 +126,7 @@ body a {
   cursor: pointer;
   color: inherit;
 }
-body a:hover {
+body a:hover, body a:focus, body a:focus-visible {
   text-decoration: none;
 }
 body h1, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
@@ -245,11 +245,11 @@ body button {
 }
 body .theme-primary-text,
 body .theme-primary-text * {
-  color: #FAFAFA;
+  color: #fafafa;
 }
 body .theme-secondary-text,
 body .theme-secondary-text * {
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 body .section-label {
   font-weight: 500;
@@ -259,9 +259,9 @@ body .section-label {
   width: -moz-max-content;
   width: max-content;
   border-radius: 21.6px;
-  background-color: #0C0C0C;
-  border: 1px solid #0C0C0C;
-  color: #FAFAFA;
+  background-color: #0c0c0c;
+  border: 1px solid #0c0c0c;
+  color: #fafafa;
   margin-bottom: 36px;
 }
 @media screen and (max-width: 991px) {
@@ -269,18 +269,18 @@ body .section-label {
     margin-bottom: 20px;
   }
 }
-body .section-label:hover {
+body .section-label:hover, body .section-label:focus, body .section-label:focus-visible {
   transition: 550ms all ease;
-  background-color: #FAFAFA;
-  color: #0C0C0C;
+  background-color: #fafafa;
+  color: #0c0c0c;
 }
 body .section-label.secondary-label {
-  background-color: #FAFAFA;
-  color: #0C0C0C;
+  background-color: #fafafa;
+  color: #0c0c0c;
 }
-body .section-label.secondary-label:hover {
-  background-color: #0C0C0C;
-  color: #FAFAFA;
+body .section-label.secondary-label:hover, body .section-label.secondary-label:focus, body .section-label.secondary-label:focus-visible {
+  background-color: #0c0c0c;
+  color: #fafafa;
 }
 
 html,
@@ -339,7 +339,8 @@ body .container {
 body .hide {
   display: none;
 }
-body.oveflow-hidden, body .oveflow-hidden {
+body.oveflow-hidden,
+body .oveflow-hidden {
   overflow: hidden;
 }
 body section {
@@ -354,7 +355,7 @@ body section {
   height: 6px;
 }
 *::-webkit-scrollbar-track {
-  background: #0C0C0C;
+  background: #0c0c0c;
 }
 *::-webkit-scrollbar-thumb {
   background: rgba(250, 250, 250, 0.6);
@@ -424,7 +425,7 @@ body header.header nav.navbar .menu-area ul.menu-wrapper {
   width: 100%;
 }
 body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link {
-  color: #FAFAFA;
+  color: #fafafa;
   position: relative;
   text-transform: uppercase;
   transition: 550ms all ease;
@@ -440,15 +441,15 @@ body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link
   width: 100%;
   height: 1px;
   transform: translateY(3px);
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   border-radius: 3px;
   transition: 550ms all ease;
 }
-body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover {
+body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus-visible {
   transition: 550ms all ease;
   color: #858585;
 }
-body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after {
+body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus::after, body header.header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus-visible::after {
   background-color: #858585;
   transition: 550ms all ease;
 }
@@ -494,7 +495,7 @@ body header.header nav.navbar .brand-area a.toggle-btn {
   font-weight: 500;
   text-transform: uppercase;
   position: relative;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 @media screen and (max-width: 767px) {
   body header.header nav.navbar .brand-area a.toggle-btn {
@@ -510,7 +511,7 @@ body header.header nav.navbar .brand-area a.toggle-btn::after {
   right: 0;
   bottom: 0;
   transform: translateY(5px);
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 body header.header nav.navbar .brand-area a.toggle-btn span {
   color: inherit;
@@ -528,7 +529,7 @@ body header.header .mobile-menu {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   z-index: 999;
 }
 @media screen and (max-width: 767px) {
@@ -551,7 +552,7 @@ body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link {
   font-weight: 500;
   text-transform: uppercase;
   position: relative;
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link::after {
   content: "";
@@ -562,13 +563,13 @@ body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link::aft
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
   transform: translateY(5px);
 }
-body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover {
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover, body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:focus, body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:focus-visible {
   color: #858585;
 }
-body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover::after {
+body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:hover::after, body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:focus::after, body header.header .mobile-menu ul.mobile-menu-list li.menu-itm a.menu-link:focus-visible::after {
   background-color: #858585;
 }
 body header.header .mobile-menu ul.social-link-list {
@@ -585,17 +586,17 @@ body header.header.colored-header {
           backdrop-filter: blur(5px) brightness(0.95);
 }
 body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link {
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:after {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
 }
-body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover {
+body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover, body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus, body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus-visible {
   transition: 550ms all ease;
-  color: #FAFAFA;
+  color: #fafafa;
 }
-body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after {
-  background-color: #FAFAFA;
+body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:hover::after, body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus::after, body header.header.colored-header nav.navbar .menu-area ul.menu-wrapper li.menu-itm a.menu-link:focus-visible::after {
+  background-color: #fafafa;
   transition: 550ms all ease;
 }
 body header.header.colored-header nav.navbar .brand-area .logo-link img.brand-logo {
@@ -603,13 +604,13 @@ body header.header.colored-header nav.navbar .brand-area .logo-link img.brand-lo
   transition: 550ms all ease;
 }
 body header.header.colored-header nav.navbar .brand-area a.toggle-btn {
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 body header.header.colored-header nav.navbar .brand-area a.toggle-btn::after {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
 }
 body header.header.open-mobile-header {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   transition: 750ms all ease;
 }
 body header.header.open-mobile-header nav.navbar .brand-area .logo-link img.brand-logo {
@@ -617,10 +618,10 @@ body header.header.open-mobile-header nav.navbar .brand-area .logo-link img.bran
   transition: 550ms all ease;
 }
 body header.header.open-mobile-header nav.navbar .brand-area a.toggle-btn {
-  color: #0C0C0C;
+  color: #0c0c0c;
 }
 body header.header.open-mobile-header nav.navbar .brand-area a.toggle-btn::after {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
 }
 body header.header.open-mobile-header .mobile-menu {
   transform: translateX(0);
@@ -685,7 +686,7 @@ body footer.footer .footer-inner-wrap .content-area .menu-section .menu-heading 
   font-size: 17px;
   line-height: 1;
   letter-spacing: 1.7px;
-  color: #CECECE;
+  color: #cecece;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
@@ -715,7 +716,7 @@ body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu
   font-size: 42px;
   line-height: 1;
   letter-spacing: -0.42px;
-  color: #0C0C0C;
+  color: #0c0c0c;
   font-weight: 500;
   transition: 550ms all ease;
 }
@@ -724,7 +725,7 @@ body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu
     font-size: 27px;
   }
 }
-body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu-list li.footer-menu-itm a.menu-link:hover {
+body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu-list li.footer-menu-itm a.menu-link:hover, body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu-list li.footer-menu-itm a.menu-link:focus, body footer.footer .footer-inner-wrap .content-area .menu-section ul.footer-menu-list li.footer-menu-itm a.menu-link:focus-visible {
   transition: 550ms all ease;
   color: #858585;
 }
@@ -780,7 +781,7 @@ body footer.footer .footer-inner-wrap .content-area .footer-contact-section .dig
 }
 body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link span {
   position: relative;
-  color: #0C0C0C;
+  color: #0c0c0c;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -793,17 +794,17 @@ body footer.footer .footer-inner-wrap .content-area .footer-contact-section .dig
   transition: 550ms all ease;
   width: 100%;
   height: 2px;
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
 }
 body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link img.icon {
   transition: 550ms all ease;
 }
-body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover span::after {
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover span::after, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:focus span::after, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:focus-visible span::after {
   width: 10px;
   right: 0;
   transition: 550ms all ease;
 }
-body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover img.icon {
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:hover img.icon, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:focus img.icon, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.contact-list li.contact-itm a.contact-link:focus-visible img.icon {
   transition: 550ms all ease;
   transform: rotate(45deg);
 }
@@ -811,7 +812,7 @@ body footer.footer .footer-inner-wrap .content-area .footer-contact-section .dig
   transition: 550ms all ease;
   filter: brightness(0);
 }
-body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link:hover {
+body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link:hover, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link:focus, body footer.footer .footer-inner-wrap .content-area .footer-contact-section .digital-contact-details ul.social-link-list .social-itm .social-link:focus-visible {
   filter: brightness(1);
   transition: 550ms all ease;
 }
@@ -1218,7 +1219,7 @@ body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-secti
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn span {
   position: relative;
-  color: #FAFAFA;
+  color: #fafafa;
   font-size: 17px;
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn span::after {
@@ -1230,22 +1231,22 @@ body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-secti
   transition: 550ms all ease;
   width: 100%;
   height: 1px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn img.icon {
   transition: 550ms all ease;
 }
-body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover span::after {
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover span::after, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:focus span::after, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:focus-visible span::after {
   width: 10px;
   right: 0;
   transition: 550ms all ease;
 }
-body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover img.icon {
+body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:hover img.icon, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:focus img.icon, body main.main-content section.fabrics-banner-section-wrap .fabrics-banner-section .overlay-wrapper .content a.redirection-btn:focus-visible img.icon {
   transition: 550ms all ease;
   transform: rotate(45deg);
 }
 body main.main-content section.contact-section-wrap .contact-section {
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
   position: relative;
   /* Styling for parent's parent div contact section */
 }
@@ -1254,7 +1255,7 @@ body main.main-content section.contact-section-wrap .contact-section::after {
   width: 100%;
   height: 100%;
   display: block;
-  background-color: #FFF200;
+  background-color: #fff200;
   position: absolute;
   top: 0;
   left: 0;
@@ -1331,7 +1332,7 @@ body main.main-content section.contact-section-wrap .contact-section .contact-ct
 }
 body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span {
   position: relative;
-  color: #0C0C0C;
+  color: #0c0c0c;
   text-transform: uppercase;
 }
 body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn span::after {
@@ -1343,7 +1344,7 @@ body main.main-content section.contact-section-wrap .contact-section .contact-ct
   transition: 550ms all ease;
   width: 100%;
   height: 4px;
-  background-color: #0C0C0C;
+  background-color: #0c0c0c;
 }
 body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn img.icon {
   transition: 550ms all ease;
@@ -1361,16 +1362,16 @@ body main.main-content section.contact-section-wrap .contact-section .contact-ct
     height: 24px;
   }
 }
-body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span {
-  color: #FFF200;
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus span, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus-visible span {
+  color: #fff200;
 }
-body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span::after {
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover span::after, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus span::after, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus-visible span::after {
   width: 10px;
   right: 0;
-  background-color: #FFF200;
+  background-color: #fff200;
   transition: 550ms all ease;
 }
-body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover img.icon {
+body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:hover img.icon, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus img.icon, body main.main-content section.contact-section-wrap .contact-section .contact-cta-inner-wrap a.contact-cta-btn:focus-visible img.icon {
   transition: 550ms all ease;
   filter: brightness(1);
   transform: rotate(45deg);

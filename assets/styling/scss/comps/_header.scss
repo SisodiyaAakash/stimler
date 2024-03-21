@@ -56,7 +56,9 @@ body {
                 transition: $transition;
               }
 
-              &:hover {
+              &:hover,
+              &:focus,
+              &:focus-visible {
                 transition: $transition;
                 color: $hover-grey;
 
@@ -183,9 +185,11 @@ body {
                 transform: translateY(5px);
               }
 
-              &:hover {
+              &:hover,
+              &:focus,
+              &:focus-visible {
                 color: $hover-grey;
-                
+
                 &::after {
                   background-color: $hover-grey;
                 }
@@ -223,7 +227,9 @@ body {
                   background-color: $theme-secondary;
                 }
 
-                &:hover {
+                &:hover,
+                &:focus,
+                &:focus-visible {
                   transition: $transition;
                   // color: $hover-grey;
                   color: $theme-primary;

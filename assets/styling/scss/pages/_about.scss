@@ -384,7 +384,9 @@ body {
                   transition: $transition;
                 }
 
-                &:hover {
+                &:hover,
+                &:focus,
+                &:focus-visible {
                   span {
                     &::after {
                       width: 10px;
@@ -516,7 +518,9 @@ body {
                 }
               }
 
-              &:hover {
+              &:hover,
+              &:focus,
+              &:focus-visible {
                 span {
                   color: $yellow;
 
