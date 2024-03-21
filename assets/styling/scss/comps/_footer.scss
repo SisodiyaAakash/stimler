@@ -220,7 +220,7 @@ body {
           gap: 15px;
 
           ul.copyright-menu-list {
-            @include flex-wrap;
+            display: flex;
             gap: 15px;
             flex: 1;
           }

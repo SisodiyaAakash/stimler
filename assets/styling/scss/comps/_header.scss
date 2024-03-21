@@ -2,6 +2,7 @@ body {
   header.header {
     position: fixed;
     width: 100%;
+    max-width: 100vw;
     z-index: 999;
     padding: 8px 0;
 

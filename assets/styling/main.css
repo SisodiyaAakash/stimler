@@ -290,6 +290,7 @@ html,
 }
 
 body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
@@ -391,6 +392,7 @@ body .text-center {
 body header.header {
   position: fixed;
   width: 100%;
+  max-width: 100vw;
   z-index: 999;
   padding: 8px 0;
 }
@@ -823,7 +825,6 @@ body footer.footer .footer-inner-wrap .content-area .copyright-section * {
 }
 body footer.footer .footer-inner-wrap .content-area .copyright-section ul.copyright-menu-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
   flex: 1;
 }
