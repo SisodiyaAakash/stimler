@@ -19,6 +19,9 @@
 
     <!-- Swiper Css file -->
     <link rel="stylesheet" type="text/css" href="./assets/styling/slick.css" />
+
+    <!-- Animation On Scroll CSS file -->
+    <link rel="stylesheet" type="text/css" href="./assets/styling/aos.css" />
   </head>
 
   <body>
@@ -111,13 +114,13 @@
         <div class="about-section">
           <div class="container about-inner-wrapper">
             <div class="media-area">
-              <figure class="about-img img-left">
+              <figure data-aos="zoom-in" class="about-img img-left">
                 <img
                   src="./assets/media/about-section-left.avif"
                   alt="About Image"
                 />
               </figure>
-              <figure class="about-img img-right">
+              <figure data-aos="zoom-in" class="about-img img-right">
                 <img
                   src="./assets/media/about-section-right.avif"
                   alt="About Image"
@@ -125,14 +128,14 @@
               </figure>
             </div>
             <div class="content-area theme-secondary-text">
-              <p class="section-label secondary-label">About Us</p>
+              <p data-aos="fade-right" class="section-label secondary-label">About Us</p>
 
-              <h3>
+              <h3 data-aos="fade-left">
                 We are a major fashion fabric supplier to all UK retailers and
                 e-tailers.
               </h3>
 
-              <div class="content-text">
+              <div data-aos="fade-left" class="content-text">
                 <p>
                   Established in 1942, J Stimler Ltd is family run, with 3
                   generations currently working in the business. We are a major
@@ -254,14 +257,15 @@
       <section class="benefits-section-wrap">
         <div class="benefits-section container">
           <div class="heading-area theme-secondary-text">
-            <p class="section-label secondary-label">Our Benefits</p>
+            <p data-aos="fade-right" class="section-label secondary-label">Our Benefits</p>
 
-            <h3 class="text-center">What we offer</h3>
+            <h3 data-aos="fade-left" class="text-center">What we offer</h3>
           </div>
 
           <div class="benefits-cards">
             <div
               class="benefit-card"
+              data-aos="zoom-in"
               id="unrivalled-customer-service"
               style="
                 background-image: url('./assets/media/benefits/unrivalled-customer-service.avif');
@@ -281,6 +285,7 @@
 
             <div
               class="benefit-card"
+              data-aos="zoom-in"
               id="quality-assured"
               style="
                 background-image: url('./assets/media/benefits/quality-assured.avif');
@@ -300,6 +305,7 @@
 
             <div
               class="benefit-card"
+              data-aos="zoom-in"
               id="bespoke-solutions"
               style="
                 background-image: url('./assets/media/benefits/bespoke-solutions.avif');
@@ -326,11 +332,11 @@
           <div class="overlay-wrapper">
             <div class="container">
               <div class="content">
-                <p class="section-label secondary-label">Our Fabrics</p>
+                <p data-aos="fade-right" class="section-label secondary-label">Our Fabrics</p>
   
-                <h2>All of the fabrics we supply are manufactured using the finest quality materials, and following best manufacturing processes.</h2>
+                <h2 data-aos="fade-left">All of the fabrics we supply are manufactured using the finest quality materials, and following best manufacturing processes.</h2>
 
-                <a href="#all-fabrics" class="redirection-btn theme-secondary-text">
+                <a data-aos="zoom-in" href="#all-fabrics" class="redirection-btn theme-secondary-text">
                   <span>ALL FABRICS</span>
                   <img class="icon" src="./assets/media/icons/url.svg" alt="Click me">
                 </a>
@@ -344,7 +350,7 @@
       <section class="contact-section-wrap">
         <div class="contact-section">
           <div class="contact-cta-inner-wrap container">
-            <a href="#contact" class="contact-cta-btn">
+            <a data-aos="zoom-in" href="#contact" class="contact-cta-btn">
               <span>Contact Us</span>
               <img class="icon" src="./assets/media/icons/url-yellow.svg" alt="Click me">
             </a>
@@ -364,22 +370,22 @@
 
         <div class="content-area">
           <div class="menu-section">
-            <h6 class="menu-heading">Menu</h6>
+            <h6 data-aos="fade-right" class="menu-heading">Menu</h6>
 
             <ul class="footer-menu-list">
-              <li class="footer-menu-itm">
+              <li data-aos="fade-left" data-aos-duration="5000" class="footer-menu-itm">
                 <a target="fabrics" href="#fabrics" class="menu-link">Fabrics</a>
               </li>
-              <li class="footer-menu-itm">
+              <li data-aos="fade-left" data-aos-duration="1000" class="footer-menu-itm">
                 <a target="sustainability" href="#sustainability" class="menu-link">Sustainability</a>
               </li>
-              <li class="footer-menu-itm">
+              <li data-aos="fade-left" data-aos-duration="3000" class="footer-menu-itm">
                 <a target="about" href="#about" class="menu-link">About Us</a>
               </li>
             </ul>
 
             <ul class="language-list">
-              <li class="lang-list-itm">
+              <li data-aos="zoom-in" class="lang-list-itm">
                 <a href="#us-en" class="lang-link">
                   <img class="flag-icon" src="./assets/media/icons/en-flag.svg" alt="English Us">
                 </a>
@@ -389,21 +395,21 @@
 
           <div class="footer-contact-section">
             <div class="physical-contact-details">
-              <p class="address-text theme-secondary-text">
+              <p data-aos="fade-left" class="address-text theme-secondary-text">
                 Martin House, Downs</br>Road, London, E5 8QJ
               </p>
             </div>
 
             <div class="digital-contact-details theme-secondary-text">
               <ul class="contact-list">
-                <li class="contact-itm">
+                <li data-aos="zoom-in" class="contact-itm">
                   <a href="tel:02072548499" class="contact-link">
                     <span>020 7254 8499</span>
 
                     <img src="./assets/media/icons/phone.svg" alt="Phone" class="icon">
                   </a>
                 </li>
-                <li class="contact-itm">
+                <li data-aos="zoom-in" class="contact-itm">
                   <a href="mailto:info@stimler.com" class="contact-link">
                     <span>info@stimler.com</span>
 
@@ -413,7 +419,7 @@
               </ul>
 
               <ul class="social-link-list">
-                <li class="social-itm">
+                <li data-aos="fade-left" class="social-itm">
                   <a href="https:://linkedin.com/username" class="social-link">
                     <img class="social-icon" src="./assets/media/icons/linkedin.svg" alt="LinkedIn">
                   </a>
@@ -445,6 +451,9 @@
 
     <!-- Script for the slick slider  -->
     <script src="./assets/script/slick.min.js"></script>
+
+    <!-- Script for the animation on scroll -->
+    <script src="./assets/script/aos.min.js"></script>
 
     <!-- Main js script that contains custom script -->
     <script src="./assets/script/main.js"></script>

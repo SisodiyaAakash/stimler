@@ -22,6 +22,9 @@ function functionWrapper($) {
        * Custom Functions
        */
       customFunctions: function () {
+         // Initializing the Animation On Scroll 
+         AOS.init();
+
          // Function for contact cta button for the contact-section 
          $('.contact-cta-btn').hover(
             function () {
