@@ -223,6 +223,12 @@ body {
             display: flex;
             gap: 15px;
             flex: 1;
+
+            li.copyright-menu-itm {
+              a.menu-link {
+                white-space: nowrap;
+              }
+            }
           }
         }
       }

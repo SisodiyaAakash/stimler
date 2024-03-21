@@ -828,6 +828,9 @@ body footer.footer .footer-inner-wrap .content-area .copyright-section ul.copyri
   gap: 15px;
   flex: 1;
 }
+body footer.footer .footer-inner-wrap .content-area .copyright-section ul.copyright-menu-list li.copyright-menu-itm a.menu-link {
+  white-space: nowrap;
+}
 
 /* Pages */
 body main.main-content section {
